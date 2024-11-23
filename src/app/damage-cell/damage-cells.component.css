@@ -1,0 +1,11 @@
+.bad-range {
+	background-color: lightcoral;
+}
+
+.range {
+	background-color: lightyellow;
+}
+
+.guaranteed {
+	background-color: lightgreen;
+}

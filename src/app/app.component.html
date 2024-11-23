@@ -1,0 +1,142 @@
+<div class="page">
+	<div class="player-section">
+		<label for="main">Main</label>
+		<ng-select [items]="pokemonList" id="main" [(ngModel)]="main"></ng-select>
+		<table class="main-info">
+			<tr>
+				<td>Level</td>
+				<td><input type="number" min="1" max="100" [(ngModel)]="mainLevel"></td>
+			</tr>
+			<tr>
+				<td>Nature</td>
+				<td>
+					<select [(ngModel)]="mainNature">
+						<option>Adamant</option>
+						<option>Bashful</option>
+						<option>Bold</option>
+						<option>Brave</option>
+						<option>Calm</option>
+						<option>Careful</option>
+						<option>Docile</option>
+						<option>Gentle</option>
+						<option>Hardy</option>
+						<option>Hasty</option>
+						<option>Impish</option>
+						<option>Jolly</option>
+						<option>Lax</option>
+						<option>Lonely</option>
+						<option>Mild</option>
+						<option>Modest</option>
+						<option>Naive</option>
+						<option>Naughty</option>
+						<option>Quiet</option>
+						<option>Quirky</option>
+						<option>Rash</option>
+						<option>Relaxed</option>
+						<option>Sassy</option>
+						<option>Serious</option>
+						<option>Timid</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>HP</td>
+				<td>
+					<input type="number" min="0" max="31" [(ngModel)]="mainHp">
+					{{ getRawStats()?.hp }}
+				</td>
+			</tr>
+			<tr>
+				<td>Atk</td>
+				<td>
+					<input type="number" min="0" max="31" [(ngModel)]="mainAtk">
+					{{ getRawStats()?.atk }}
+					<input class="stage-input" type="number" min="-6" max="6" [(ngModel)]="mainAtkStage">
+				</td>
+			</tr>
+			<tr>
+				<td>Def</td>
+				<td>
+					<input type="number" min="0" max="31" [(ngModel)]="mainDef">
+					{{ getRawStats()?.def }}
+					<input class="stage-input" type="number" min="-6" max="6" [(ngModel)]="mainDefStage">
+				</td>
+			</tr>
+			<tr>
+				<td>SpAtk</td>
+				<td>
+					<input type="number" min="0" max="31" [(ngModel)]="mainSpa">
+					{{ getRawStats()?.spa }}
+					<input class="stage-input" type="number" min="-6" max="6" [(ngModel)]="mainSpaStage">
+				</td>
+			</tr>
+			<tr>
+				<td>SpDef</td>
+				<td>
+					<input type="number" min="0" max="31" [(ngModel)]="mainSpd">
+					{{ getRawStats()?.spd }}
+					<input class="stage-input" type="number" min="-6" max="6" [(ngModel)]="mainSpdStage">
+				</td>
+			</tr>
+			<tr>
+				<td>Speed</td>
+				<td>
+					<input type="number" min="0" max="31" [(ngModel)]="mainSpe">
+					{{ getRawStats()?.spe }}
+					<input class="stage-input" type="number" min="-6" max="6" [(ngModel)]="mainSpeStage">
+				</td>
+			</tr>
+			<tr>
+				<td>Move 1</td>
+				<td><ng-select [items]="movesList" id="moveOne" [(ngModel)]="moveOne"></ng-select></td>
+			</tr>
+			<tr>
+				<td>Move 2</td>
+				<td><ng-select [items]="movesList" id="moveTwo" [(ngModel)]="moveTwo"></ng-select></td>
+			</tr>
+			<tr>
+				<td>Move 3</td>
+				<td><ng-select [items]="movesList" id="moveThree" [(ngModel)]="moveThree"></ng-select></td>
+			</tr>
+			<tr>
+				<td>Move 4</td>
+				<td><ng-select [items]="movesList" id="moveFour" [(ngModel)]="moveFour"></ng-select></td>
+			</tr>
+			<tr>
+				<td>Item</td>
+				<td><ng-select [items]="itemsList" id="mainItem" [(ngModel)]="mainItem"></ng-select></td>
+			</tr>
+			<tr>
+				<td>Weather Override</td>
+				<td>
+					<select [(ngModel)]="weatherOverride">
+						<option></option>
+						<option>Sun</option>
+						<option>Rain</option>
+						<option>Hail</option>
+						<option>Sand</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="opponent-section">
+		<div class="trainer" *ngFor="let trainer of trainerData">
+			{{ trainer.name }}
+			<div class="trainer-pokemon-container">
+				<div class="trainer-pokemon" *ngFor="let pokemon of trainer.pokemon">
+					{{ pokemon.name }} <span class="bold">{{ speedCheck(trainer, pokemon) }}</span>
+					<table>
+						<tr>
+							<td>{{ moveOne }}</td>
+							<td>{{ moveTwo }}</td>
+							<td>{{ moveThree }}</td>
+							<td>{{ moveFour }}</td>
+						</tr>
+						<tr app-damage-cells [gen]="gen" [main]="getMain(trainer)" [moves]="[moveOne, moveTwo, moveThree, moveFour]" [trainer]="trainer" [pokemon]="pokemon" [trainerData]="trainerData" [weatherOverride]="weatherOverride"></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+.page {
+	padding: 8px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.player-section {
+	width: 500px;
+}
+
+.opponent-section {
+	overflow-y: scroll;
+	max-height: calc(100vh - 32px);
+	width: calc(100vw - 542px);
+}
+
+.main-info {
+	width: 100%;
+}
+
+.trainer {
+	margin-bottom: 15px;
+}
+
+.trainer-pokemon-container {
+	display: flex;
+}
+
+.trainer-pokemon {
+	padding-right: 10px;
+}
+
+.stage-input {
+	margin-left: 15px;
+}
+
+.bold {
+	font-weight: bold;
+}
