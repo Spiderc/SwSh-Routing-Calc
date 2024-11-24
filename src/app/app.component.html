@@ -1,5 +1,14 @@
 <div class="page">
 	<div class="player-section">
+		<label for="gameStarter">Game/Starter</label>
+		<br>
+		<select id="gameStarter" (change)="routeChanged($event)">
+			<option></option>
+			<option value="shieldSobble">Shield Sobble</option>
+			<option value="swordGrookey">Sword Grookey</option>
+			<option value="swordGrookeyLateFly">Sword Grookey (Late Fly)</option>
+		</select>
+		<br>
 		<label for="main">Main</label>
 		<ng-select [items]="pokemonList" id="main" [(ngModel)]="main"></ng-select>
 		<table class="main-info">

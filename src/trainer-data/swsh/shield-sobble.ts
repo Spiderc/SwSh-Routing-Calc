@@ -1,65 +1,8 @@
 import { Pokemon } from '@smogon/calc';
 
-export class SwordGrookey {
+export class ShieldSobble {
 	trainerData = [
 		{
-			name: 'Motostoke Yell One',
-			pokemon: [
-				new Pokemon(8, 'Zigzagoon-Galar',
-					{
-						level: 9,
-						ivs: {
-							hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0
-						},
-						nature: 'Brave'
-					}
-				)
-			],
-			evs: {
-				hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 1
-			}
-		}, {
-			name: 'Motostoke Yell Two',
-			pokemon: [
-				new Pokemon(8, 'Nickit',
-					{
-						level: 9,
-						ivs: {
-							hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0
-						},
-						nature: 'Serious'
-					}
-				)
-			],
-			evs: {
-				hp: 0, atk: 0, def: 0, spa: 0, spd: 1, spe: 0
-			}
-		}, {
-			name: 'Motostoke Yell Double',
-			pokemon: [
-				new Pokemon(8, 'Zigzagoon-Galar',
-					{
-						level: 9,
-						ivs: {
-							hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0
-						},
-						nature: 'Naughty'
-					}
-				), new Pokemon(8, 'Nickit',
-					{
-						level: 9,
-						ivs: {
-							hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0
-						},
-						nature: 'Serious'
-					}
-				)
-			],
-			evs: {
-				hp: 0, atk: 0, def: 0, spa: 0, spd: 1, spe: 1
-			},
-			isDouble: true
-		}, {
 			name: 'Hop 3',
 			pokemon: [
 				new Pokemon(8, 'Wooloo',
@@ -80,7 +23,7 @@ export class SwordGrookey {
 						nature: 'Jolly'
 					}
 				),
-				new Pokemon(8, 'Sobble',
+				new Pokemon(8, 'Scorbunny',
 					{
 						level: 14,
 						ivs: {
@@ -91,7 +34,7 @@ export class SwordGrookey {
 				)
 			],
 			evs: {
-				hp: 0, atk: 0, def: 1, spa: 0, spd: 1, spe: 2
+				hp: 0, atk: 0, def: 1, spa: 0, spd: 0, spe: 2
 			}
 		}, {
 			name: 'Schoolboy Peter',
@@ -283,7 +226,7 @@ export class SwordGrookey {
 						nature: 'Jolly'
 					}
 				),
-				new Pokemon(8, 'Drizzile',
+				new Pokemon(8, 'Raboot',
 					{
 						level: 14,
 						ivs: {
@@ -294,7 +237,7 @@ export class SwordGrookey {
 				)
 			],
 			evs: {
-				hp: 0, atk: 0, def: 1, spa: 2, spd: 0, spe: 2
+				hp: 0, atk: 0, def: 1, spa: 0, spd: 0, spe: 4
 			}
 		}, {
 			name: 'Gym Trainer Julia',
@@ -635,8 +578,7 @@ export class SwordGrookey {
 						ivs: {
 							hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0
 						},
-						nature: 'Serious',
-						ability: 'Sturdy'
+						nature: 'Serious'
 					}
 				)
 			],
@@ -674,7 +616,7 @@ export class SwordGrookey {
 						nature: 'Bold'
 					}
 				),
-				new Pokemon(8, 'Drizzile',
+				new Pokemon(8, 'Raboot',
 					{
 						level: 33,
 						ivs: {
@@ -685,119 +627,129 @@ export class SwordGrookey {
 				)
 			],
 			evs: {
-				hp: 0, atk: 0, def: 1, spa: 3, spd: 2, spe: 0
+				hp: 0, atk: 0, def: 1, spa: 1, spd: 2, spe: 2
 			}
 		}, {
-			name: 'Gym Trainer Ian',
+			name: 'Gym Trainer Clive',
 			pokemon: [
-				new Pokemon(8, 'Stufful',
+				new Pokemon(8, 'Pumpkaboo',
 					{
 						level: 31,
 						ivs: {
 							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
 						},
-						nature: 'Adamant'
+						nature: 'Calm'
 					}
 				),
-				new Pokemon(8, 'Bewear',
+				new Pokemon(8, 'Phantump',
 					{
-						level: 33,
+						level: 31,
 						ivs: {
 							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
 						},
-						nature: 'Modest'
+						nature: 'Jolly'
+					}
+				),
+				new Pokemon(8, 'Pumpkaboo-Large',
+					{
+						level: 31,
+						ivs: {
+							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
+						},
+						nature: 'Bold'
 					}
 				)
 			],
 			evs: {
-				hp: 0, atk: 3, def: 0, spa: 0, spd: 0, spe: 0
+				hp: 0, atk: 1, def: 2, spa: 0, spd: 0, spe: 0
 			}
 		}, {
-			name: 'Gym Trainer Claire',
+			name: 'Gym Trainer Lynne',
 			pokemon: [
-				new Pokemon(8, 'Farfetch\'d - Galar',
+				new Pokemon(8, 'Corsola-Galar',
 					{
 						level: 32,
 						ivs: {
 							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
 						},
-						nature: 'Lonely'
+						nature: 'Bold'
 					}
 				)
 			],
 			evs: {
-				hp: 0, atk: 1, def: 0, spa: 0, spd: 0, spe: 0
+				hp: 0, atk: 0, def: 0, spa: 0, spd: 1, spe: 0
 			}
 		}, {
-			name: 'Gym Trainer Simon',
+			name: 'Gym Trainer Roy',
 			pokemon: [
-				new Pokemon(8, 'Hitmonlee',
+				new Pokemon(8, 'Haunter',
 					{
 						level: 33,
 						ivs: {
 							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
 						},
-						nature: 'Modest'
+						nature: 'Serious',
+						ability: 'Levitate'
 					}
 				),
-				new Pokemon(8, 'Hitmonchan',
+				new Pokemon(8, 'Drifblim',
 					{
 						level: 33,
 						ivs: {
 							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
 						},
-						nature: 'Modest'
+						nature: 'Serious'
 					}
 				)
 			],
 			evs: {
-				hp: 0, atk: 2, def: 0, spa: 0, spd: 2, spe: 0
+				hp: 2, atk: 0, def: 0, spa: 2, spd: 0, spe: 0
 			}
 		}, {
-			name: 'Gym Leader Bea 1',
+			name: 'Gym Leader Allister 1',
 			pokemon: [
-				new Pokemon(8, 'Hitmontop',
+				new Pokemon(8, 'Yamask-Galar',
 					{
 						level: 34,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Adamant'
+						nature: 'Calm'
 					}
 				),
-				new Pokemon(8, 'Pangoro',
+				new Pokemon(8, 'Mimikyu',
 					{
 						level: 34,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Careful'
+						nature: 'Jolly'
 					}
 				),
-				new Pokemon(8, 'Sirfetch\'d',
+				new Pokemon(8, 'Cursola',
 					{
 						level: 35,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Impish'
+						nature: 'Bold'
 					}
 				),
-				new Pokemon(8, 'Machamp',
+				new Pokemon(8, 'Gengar',
 					{
 						level: 36,
 						ivs: {
 							hp: 20, atk: 20, def: 20, spa: 20, spd: 20, spe: 20
 						},
-						nature: 'Careful',
+						nature: 'Brave',
 						evs: {
-							hp: 848
+							hp: 688
 						}
 					}
 				)
 			],
 			evs: {
-				hp: 0, atk: 7, def: 0, spa: 0, spd: 2, spe: 0
+				hp: 0, atk: 0, def: 1, spa: 5, spd: 2, spe: 0
 			}
 		}, {
 			name: 'Bede 3',
@@ -936,7 +888,8 @@ export class SwordGrookey {
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Adamant'
+						nature: 'Adamant',
+						ability: 'Levitate'
 					}
 				),
 				new Pokemon(8, 'Togekiss',
@@ -1005,7 +958,7 @@ export class SwordGrookey {
 						nature: 'Adamant'
 					}
 				),
-				new Pokemon(8, 'Inteleon',
+				new Pokemon(8, 'Cinderace',
 					{
 						level: 37,
 						ivs: {
@@ -1044,50 +997,51 @@ export class SwordGrookey {
 				hp: 0, atk: 0, def: 0, spa: 4, spd: 0, spe: 0
 			}
 		}, {
-			name: 'Gym Leader Gordie',
+			name: 'Gym Leader Melony',
 			pokemon: [
-				new Pokemon(8, 'Barbaracle',
+				new Pokemon(8, 'Frosmoth',
 					{
 						level: 40,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Adamant'
+						nature: 'Relaxed'
 					}
 				),
-				new Pokemon(8, 'Shuckle',
+				new Pokemon(8, 'Darmanitan-Galar',
 					{
 						level: 40,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Quiet'
+						nature: 'Relaxed'
 					}
 				),
-				new Pokemon(8, 'Stonjourner',
+				new Pokemon(8, 'Eiscue',
 					{
 						level: 41,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Jolly'
+						nature: 'Relaxed'
 					}
 				),
-				new Pokemon(8, 'Coalossal',
+				new Pokemon(8, 'Lapras',
 					{
 						level: 42,
 						ivs: {
 							hp: 20, atk: 20, def: 20, spa: 20, spd: 20, spe: 20
 						},
 						nature: 'Adamant',
+						ability: 'Shell Armor',
 						evs: {
-							hp: 1004
+							hp: 1120
 						}
 					}
 				)
 			],
 			evs: {
-				hp: 0, atk: 2, def: 6, spa: 0, spd: 1, spe: 0
+				hp: 2, atk: 2, def: 2, spa: 2, spd: 0, spe: 0
 			}
 		}, {
 			name: 'Hop 7',
@@ -1130,7 +1084,7 @@ export class SwordGrookey {
 						ability: 'Thick Fat'
 					}
 				),
-				new Pokemon(8, 'Inteleon',
+				new Pokemon(8, 'Cinderace',
 					{
 						level: 41,
 						ivs: {
@@ -1311,7 +1265,8 @@ export class SwordGrookey {
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Adamant'
+						nature: 'Adamant',
+						ability: 'Intimidate'
 					}
 				),
 				new Pokemon(8, 'Malamar',
@@ -1679,7 +1634,7 @@ export class SwordGrookey {
 						ability: 'Thick Fat'
 					}
 				),
-				new Pokemon(8, 'Inteleon',
+				new Pokemon(8, 'Cinderace',
 					{
 						level: 49,
 						ivs: {
@@ -1687,7 +1642,7 @@ export class SwordGrookey {
 						},
 						nature: 'Hardy',
 						evs: {
-							hp: 648
+							hp: 756
 						}
 					}
 				)
@@ -2028,18 +1983,9 @@ export class SwordGrookey {
 				hp: 0, atk: 4, def: 4, spa: 0, spd: 0, spe: 2
 			}
 		}, {
-			name: 'Gym Leader Bea 2',
+			name: 'Gym Leader Allister 2',
 			pokemon: [
-				new Pokemon(8, 'Hawlucha',
-					{
-						level: 52,
-						ivs: {
-							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
-						},
-						nature: 'Adamant'
-					}
-				),
-				new Pokemon(8, 'Grapploct',
+				new Pokemon(8, 'Dusknoir',
 					{
 						level: 52,
 						ivs: {
@@ -2048,40 +1994,48 @@ export class SwordGrookey {
 						nature: 'Bold'
 					}
 				),
-				new Pokemon(8, 'Sirfetch\'d',
+				new Pokemon(8, 'Chandelure',
+					{
+						level: 52,
+						ivs: {
+							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
+						},
+						nature: 'Calm'
+					}
+				),
+				new Pokemon(8, 'Cursola',
 					{
 						level: 53,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Impish'
+						nature: 'Brave'
 					}
 				),
-				new Pokemon(8, 'Falinks',
+				new Pokemon(8, 'Polteageist',
 					{
 						level: 53,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
-						nature: 'Bold',
-						ability: 'Battle Armor'
+						nature: 'Timid',
 					}
 				),
-				new Pokemon(8, 'Machamp',
+				new Pokemon(8, 'Gengar',
 					{
 						level: 54,
 						ivs: {
 							hp: 20, atk: 20, def: 20, spa: 20, spd: 20, spe: 20
 						},
-						nature: 'Careful',
+						nature: 'Brave',
 						evs: {
-							hp: 892
+							hp: 716
 						}
 					}
 				)
 			],
 			evs: {
-				hp: 0, atk: 11, def: 0, spa: 0, spd: 1, spe: 0
+				hp: 0, atk: 0, def: 1, spa: 10, spd: 2, spe: 0
 			}
 		}, {
 			name: 'Gym Leader Raihan 2',
@@ -2228,23 +2182,23 @@ export class SwordGrookey {
 						nature: 'Jolly'
 					}
 				),
-				new Pokemon(8, 'Seismitoad',
+				new Pokemon(8, 'Rhyperior',
 					{
 						level: 64,
 						ivs: {
 							hp: 20, atk: 20, def: 20, spa: 20, spd: 20, spe: 20
 						},
 						nature: 'Adamant',
-						ability: 'Water Absorb'
+						ability: 'Solid Rock'
 					}
 				),
-				new Pokemon(8, 'Cinderace',
+				new Pokemon(8, 'Rillaboom',
 					{
 						level: 64,
 						ivs: {
 							hp: 20, atk: 20, def: 20, spa: 20, spd: 20, spe: 20
 						},
-						nature: 'Jolly'
+						nature: 'Adamant'
 					}
 				),
 				new Pokemon(8, 'Charizard',

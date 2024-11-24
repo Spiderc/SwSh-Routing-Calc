@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { calculate, Field, Generations, ITEMS, MOVES, Pokemon, SPECIES } from '@smogon/calc';
-import { Move } from '@smogon/calc/dist/move';
+import { Generations, ITEMS, MOVES, Pokemon, SPECIES } from '@smogon/calc';
 import { SwordGrookey } from '../trainer-data/swsh/sword-grookey';
+import { SwordGrookeyLateFly } from '../trainer-data/swsh/sword-grookey-late-fly';
+import { ShieldSobble } from '../trainer-data/swsh/shield-sobble';
 
 @Component({
 	selector: 'app-root',
@@ -46,7 +47,20 @@ export class AppComponent implements OnInit {
 		}
 		this.itemsList = ITEMS[8];
 
-		this.trainerData = new SwordGrookey().trainerData;
+		this.trainerData = [];
+	}
+
+	routeChanged(e: any) {
+		const route = e.target.value;
+		if (route === 'shieldSobble') {
+			this.trainerData = new ShieldSobble().trainerData;
+		} else if (route === 'swordGrookey') {
+			this.trainerData = new SwordGrookey().trainerData;
+		} else if (route === 'swordGrookeyLateFly') {
+			this.trainerData = new SwordGrookeyLateFly().trainerData;
+		} else {
+			this.trainerData = [];
+		}
 	}
 
 	getMain(trainer: any) {
@@ -67,7 +81,7 @@ export class AppComponent implements OnInit {
 	getEvsTotals(opponent: any) {
 		const evs = { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 };
 		for (const trainer of this.trainerData) {
-			if (trainer === opponent) {
+			if (!opponent || trainer === opponent) {
 				break;
 			}
 			evs.hp = evs.hp + trainer.evs.hp;
