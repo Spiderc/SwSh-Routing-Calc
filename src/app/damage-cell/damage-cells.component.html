@@ -1,3 +1,6 @@
-<ng-container *ngFor="let counter of [].constructor(4); let i = index">
-	<td [ngClass]="{'bad-range': koCounts[i] > 0 && koCounts[i] < 10, 'range': koCounts[i] >= 10 && koCounts[i] < 16, 'guaranteed' : koCounts[i] === 16}">{{ koCounts[i] ? koCounts[i] + ' / 16' : '' }}</td>
+<ng-container *ngFor="let counter of [].constructor(2); let i = index">
+	<td [ngClass]="{'bad-range': koCounts[i] > 0 && koCounts[i] < 10, 'range': koCounts[i] >= 10 && koCounts[i] < 16, 'guaranteed' : koCounts[i] === 16}">
+		<div>{{ moves[i] }}</div>
+		<div>{{ koCounts[i] ? koCounts[i] + ' / 16' : '&nbsp;' }}</div>
+	</td>
 </ng-container>

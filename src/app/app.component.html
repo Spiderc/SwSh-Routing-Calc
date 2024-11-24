@@ -134,15 +134,10 @@
 			{{ trainer.name }}
 			<div class="trainer-pokemon-container">
 				<div class="trainer-pokemon" *ngFor="let pokemon of trainer.pokemon">
-					{{ pokemon.name }} <span class="bold">{{ speedCheck(trainer, pokemon) }}</span>
+					{{ pokemon.name }} <span class="bold">{{ pokemon.ability === 'Intimidate' ? 'Intim.' : ''}} {{ speedCheck(trainer, pokemon) }}</span>
 					<table>
-						<tr>
-							<td>{{ moveOne }}</td>
-							<td>{{ moveTwo }}</td>
-							<td>{{ moveThree }}</td>
-							<td>{{ moveFour }}</td>
-						</tr>
-						<tr app-damage-cells [gen]="gen" [main]="getMain(trainer)" [moves]="[moveOne, moveTwo, moveThree, moveFour]" [trainer]="trainer" [pokemon]="pokemon" [trainerData]="trainerData" [weatherOverride]="weatherOverride"></tr>
+						<tr app-damage-cells [gen]="gen" [main]="getMain(trainer)" [moves]="[moveOne, moveTwo]" [trainer]="trainer" [pokemon]="pokemon" [trainerData]="trainerData" [weatherOverride]="weatherOverride"></tr>
+						<tr app-damage-cells [gen]="gen" [main]="getMain(trainer)" [moves]="[moveThree, moveFour]" [trainer]="trainer" [pokemon]="pokemon" [trainerData]="trainerData" [weatherOverride]="weatherOverride"></tr>
 					</table>
 				</div>
 			</div>

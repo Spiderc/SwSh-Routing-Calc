@@ -22,8 +22,6 @@ export class DamageCellsComponent implements OnChanges {
 	ngOnChanges(): void {
 		this.getRange(0);
 		this.getRange(1);
-		this.getRange(2);
-		this.getRange(3);
 	}
 
 	getRange(i: number) {
