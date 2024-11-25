@@ -889,7 +889,7 @@ export class ShieldSobble {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
 						nature: 'Adamant',
-						ability: 'Levitate'
+						ability: 'Intimidate'
 					}
 				),
 				new Pokemon(8, 'Togekiss',
@@ -1514,7 +1514,7 @@ export class ShieldSobble {
 						ability: 'Gorilla Tactics'
 					}
 				),
-				new Pokemon(8, 'Rhydon',
+				new Pokemon(8, 'Falinks',
 					{
 						level: 46,
 						ivs: {
