@@ -10,7 +10,9 @@
 		</select>
 		<br>
 		<label for="main">Main</label>
-		<ng-select [items]="pokemonList" id="main" [(ngModel)]="main"></ng-select>
+		<ng-select [items]="pokemonList" id="main" [(ngModel)]="main" (change)="mainChanged($event)"></ng-select>
+		<label for="main">Ability</label>
+		<ng-select [items]="abilityList" id="ability" [(ngModel)]="ability"></ng-select>
 		<table class="main-info">
 			<tr>
 				<td>Level</td>

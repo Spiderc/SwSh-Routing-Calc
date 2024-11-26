@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Generations, ITEMS, MOVES, Pokemon, SPECIES } from '@smogon/calc';
+import { ABILITIES, Generations, ITEMS, MOVES, Pokemon, SPECIES } from '@smogon/calc';
 import { SwordGrookey } from '../trainer-data/swsh/sword-grookey';
 import { SwordGrookeyLateFly } from '../trainer-data/swsh/sword-grookey-late-fly';
 import { ShieldSobble } from '../trainer-data/swsh/shield-sobble';
@@ -12,12 +12,14 @@ import { ShieldSobble } from '../trainer-data/swsh/shield-sobble';
 export class AppComponent implements OnInit {
 	gen = Generations.get(8);
 	pokemonList: string[] = [];
+	abilityList: string[] = [];
 	movesList: string[] = [];
 	itemsList: string[] = [];
 
 	trainerData: any[] = [];
 
 	main = '';
+	ability = '';
 	mainNature = 'Serious';
 	mainLevel = 65;
 	mainHp = 31;
@@ -42,6 +44,7 @@ export class AppComponent implements OnInit {
 		for (const mon of Object.keys(SPECIES[8])) {
 			this.pokemonList.push(mon);
 		}
+		this.abilityList = ABILITIES[8];
 		for (const move of Object.keys(MOVES[8])) {
 			this.movesList.push(move);
 		}
@@ -67,6 +70,7 @@ export class AppComponent implements OnInit {
 		let main: any;
 		if (this.main) {
 			main = new Pokemon(this.gen, this.main, {
+				ability: this.ability,
 				level: this.mainLevel,
 				ivs: { hp: this.mainHp, atk: this.mainAtk, def: this.mainDef, spa: this.mainSpa, spd: this.mainSpd, spe: this.mainSpe },
 				evs: this.getEvsTotals(trainer),
@@ -128,5 +132,10 @@ export class AppComponent implements OnInit {
 
 	getRawStats() {
 		return this.getMain('')?.rawStats;
+	}
+
+	mainChanged(e: any) {
+		const main = new Pokemon(this.gen, e);
+		this.ability = main.ability ? main.ability : '';
 	}
 }
