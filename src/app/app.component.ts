@@ -40,6 +40,10 @@ export class AppComponent implements OnInit {
 	mainItem = '';
 	weatherOverride = '';
 
+	addEvsTrainer = '';
+	addEvs = { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 };
+	addedEvs: any = [];
+
 	ngOnInit(): void {
 		for (const mon of Object.keys(SPECIES[8])) {
 			this.pokemonList.push(mon);
@@ -64,6 +68,7 @@ export class AppComponent implements OnInit {
 		} else {
 			this.trainerData = [];
 		}
+		this.addedEvs = [];
 	}
 
 	getMain(trainer: any) {
@@ -85,15 +90,25 @@ export class AppComponent implements OnInit {
 	getEvsTotals(opponent: any) {
 		const evs = { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 };
 		for (const trainer of this.trainerData) {
+			for (const addEv of this.addedEvs) {
+				if (trainer.name === addEv.before) {
+					evs.hp = Math.min(evs.hp + addEv.evs.hp, 252);
+					evs.atk = Math.min(evs.atk + addEv.evs.atk, 252);
+					evs.def = Math.min(evs.def + addEv.evs.def, 252);
+					evs.spa = Math.min(evs.spa + addEv.evs.spa, 252);
+					evs.spd = Math.min(evs.spd + addEv.evs.spd, 252);
+					evs.spe = Math.min(evs.spe + addEv.evs.spe, 252);
+				}
+			}
 			if (!opponent || trainer === opponent) {
 				break;
 			}
-			evs.hp = evs.hp + trainer.evs.hp;
-			evs.atk = evs.atk + trainer.evs.atk;
-			evs.def = evs.def + trainer.evs.def;
-			evs.spa = evs.spa + trainer.evs.spa;
-			evs.spd = evs.spd + trainer.evs.spd;
-			evs.spe = evs.spe + trainer.evs.spe;
+			evs.hp = Math.min(evs.hp + trainer.evs.hp, 252);
+			evs.atk = Math.min(evs.atk + trainer.evs.atk, 252);
+			evs.def = Math.min(evs.def + trainer.evs.def, 252);
+			evs.spa = Math.min(evs.spa + trainer.evs.spa, 252);
+			evs.spd = Math.min(evs.spd + trainer.evs.spd, 252);
+			evs.spe = Math.min(evs.spe + trainer.evs.spe, 252);
 		}
 
 		return evs;
@@ -137,5 +152,19 @@ export class AppComponent implements OnInit {
 	mainChanged(e: any) {
 		const main = new Pokemon(this.gen, e);
 		this.ability = main.ability ? main.ability : '';
+	}
+
+	addEvsToRoute() {
+		this.addedEvs.push({
+			before: this.addEvsTrainer,
+			evs: this.addEvs
+		});
+
+		this.addEvsTrainer = '';
+		this.addEvs = { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 };
+	}
+
+	removeEvs(i: number) {
+		this.addedEvs.splice(i, 1);
 	}
 }

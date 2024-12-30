@@ -130,9 +130,62 @@
 				</td>
 			</tr>
 		</table>
+		Add EVs
+		<table>
+			<tr>
+				<td colspan="7">
+					Before Trainer:
+					<ng-select [items]="trainerData" bindValue="name" bindLabel="name" id="trainerEv" [(ngModel)]="addEvsTrainer"></ng-select>
+				</td>
+			</tr>
+			<tr>
+				<td>HP</td>
+				<td>Atk</td>
+				<td>Def</td>
+				<td>SpAtk</td>
+				<td>SpDef</td>
+				<td>Spe</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="number" min="0" max="252" [(ngModel)]="addEvs.hp"></td>
+				<td><input type="number" min="0" max="252" [(ngModel)]="addEvs.atk"></td>
+				<td><input type="number" min="0" max="252" [(ngModel)]="addEvs.def"></td>
+				<td><input type="number" min="0" max="252" [(ngModel)]="addEvs.spa"></td>
+				<td><input type="number" min="0" max="252" [(ngModel)]="addEvs.spd"></td>
+				<td><input type="number" min="0" max="252" [(ngModel)]="addEvs.spe"></td>
+				<td><button type="button" (click)="addEvsToRoute()">Add</button></td>
+			</tr>
+		</table>
+
 	</div>
 	<div class="opponent-section">
 		<div class="trainer" *ngFor="let trainer of trainerData">
+			<ng-container *ngFor="let addedEv of addedEvs; let i = index">
+				<div *ngIf="addedEv.before === trainer.name">
+					Added EVs:
+					<table>
+						<tr>
+							<td *ngIf="addedEv.evs.hp">HP</td>
+							<td *ngIf="addedEv.evs.atk">Atk</td>
+							<td *ngIf="addedEv.evs.def">Def</td>
+							<td *ngIf="addedEv.evs.spa">SpAtk</td>
+							<td *ngIf="addedEv.evs.spd">SpDef</td>
+							<td *ngIf="addedEv.evs.spe">Spe</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td *ngIf="addedEv.evs.hp">{{ addedEv.evs.hp }}</td>
+							<td *ngIf="addedEv.evs.atk">{{ addedEv.evs.atk }}</td>
+							<td *ngIf="addedEv.evs.def">{{ addedEv.evs.def }}</td>
+							<td *ngIf="addedEv.evs.spa">{{ addedEv.evs.spa }}</td>
+							<td *ngIf="addedEv.evs.spd">{{ addedEv.evs.spd }}</td>
+							<td *ngIf="addedEv.evs.spe">{{ addedEv.evs.spe }}</td>
+							<td><button type="button" (click)="removeEvs(i)">Remove</button></td>
+						</tr>
+					</table>
+				</div>
+			</ng-container>
 			{{ trainer.name }}
 			<div class="trainer-pokemon-container">
 				<div class="trainer-pokemon" *ngFor="let pokemon of trainer.pokemon">
