@@ -3,6 +3,63 @@ import { Pokemon } from '@smogon/calc';
 export class SwordGrookeyLateFly {
 	trainerData = [
 		{
+			name: 'Motostoke Yell One',
+			pokemon: [
+				new Pokemon(8, 'Zigzagoon-Galar',
+					{
+						level: 9,
+						ivs: {
+							hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0
+						},
+						nature: 'Brave'
+					}
+				)
+			],
+			evs: {
+				hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 1
+			}
+		}, {
+			name: 'Motostoke Yell Two',
+			pokemon: [
+				new Pokemon(8, 'Nickit',
+					{
+						level: 9,
+						ivs: {
+							hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0
+						},
+						nature: 'Serious'
+					}
+				)
+			],
+			evs: {
+				hp: 0, atk: 0, def: 0, spa: 0, spd: 1, spe: 0
+			}
+		}, {
+			name: 'Motostoke Yell Double',
+			pokemon: [
+				new Pokemon(8, 'Zigzagoon-Galar',
+					{
+						level: 9,
+						ivs: {
+							hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0
+						},
+						nature: 'Naughty'
+					}
+				), new Pokemon(8, 'Nickit',
+					{
+						level: 9,
+						ivs: {
+							hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0
+						},
+						nature: 'Serious'
+					}
+				)
+			],
+			evs: {
+				hp: 0, atk: 0, def: 0, spa: 0, spd: 1, spe: 1
+			},
+			isDouble: true
+		}, {
 			name: 'Hop 3',
 			pokemon: [
 				new Pokemon(8, 'Wooloo',
