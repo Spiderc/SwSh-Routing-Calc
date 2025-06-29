@@ -11,7 +11,8 @@ export class SwordGrookey {
 						ivs: {
 							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
 						},
-						nature: 'Hasty'
+						nature: 'Hasty',
+						ability: 'Run Away'
 					}
 				),
 				new Pokemon(8, 'Rookidee',
@@ -210,16 +211,17 @@ export class SwordGrookey {
 			pokemon: [
 				new Pokemon(8, 'Wooloo',
 					{
-						level: 11,
+						level: 18,
 						ivs: {
 							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
 						},
-						nature: 'Hasty'
+						nature: 'Hasty',
+						ability: 'Run Away'
 					}
 				),
 				new Pokemon(8, 'Corvisquire',
 					{
-						level: 12,
+						level: 19,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15
 						},
@@ -228,7 +230,7 @@ export class SwordGrookey {
 				),
 				new Pokemon(8, 'Drizzile',
 					{
-						level: 14,
+						level: 21,
 						ivs: {
 							hp: 15, atk: 15, def: 15, spa: 25, spd: 25, spe: 20
 						},
@@ -1042,7 +1044,8 @@ export class SwordGrookey {
 						ivs: {
 							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
 						},
-						nature: 'Hasty'
+						nature: 'Hasty',
+						ability: 'Steadfast'
 					}
 				),
 				new Pokemon(8, 'Corviknight',
@@ -1591,7 +1594,8 @@ export class SwordGrookey {
 						ivs: {
 							hp: 5, atk: 5, def: 5, spa: 5, spd: 5, spe: 5
 						},
-						nature: 'Hasty'
+						nature: 'Hasty',
+						ability: 'Steadfast'
 					}
 				),
 				new Pokemon(8, 'Corviknight',

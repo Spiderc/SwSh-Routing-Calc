@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ABILITIES, Generations, ITEMS, MOVES, Pokemon, SPECIES } from '@smogon/calc';
 import { SwordGrookey } from '../trainer-data/swsh/sword-grookey';
+import { SwordSobble } from '../trainer-data/swsh/sword-sobble';
 import { SwordGrookeyLateFly } from '../trainer-data/swsh/sword-grookey-late-fly';
 import { ShieldSobble } from '../trainer-data/swsh/shield-sobble';
+import { SwordTamScorbunny } from '../trainer-data/swsh/sword-tam-scorbunny';
 
 @Component({
 	selector: 'app-root',
@@ -65,6 +67,10 @@ export class AppComponent implements OnInit {
 			this.trainerData = new SwordGrookey().trainerData;
 		} else if (route === 'swordGrookeyLateFly') {
 			this.trainerData = new SwordGrookeyLateFly().trainerData;
+		} else if (route === 'swordSobble') {
+			this.trainerData = new SwordSobble().trainerData;
+		} else if (route === 'swordTamScorbunny') {
+			this.trainerData = new SwordTamScorbunny().trainerData;
 		} else {
 			this.trainerData = [];
 		}
